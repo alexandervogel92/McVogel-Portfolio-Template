@@ -1,0 +1,30 @@
+{
+  "DE": {
+    "colors": "#0e1924",
+    "slides": [
+      "Code sollte so geschrieben sein, dass andere Entwickler ihn problemlos verstehen und weiterentwickeln können. Verwende sprechende Variablennamen, vermeide zu komplexe Funktionen und kommentiere nur dort, wo es notwendig ist.",
+      "Anstatt denselben Code an mehreren Stellen zu wiederholen, solltest du ihn in Funktionen oder Klassen kapseln, die an mehreren Stellen im Projekt verwendet werden können.",
+      "Implementiere Lösungen so einfach wie möglich, ohne die Qualität zu beeinträchtigen. Komplexität sollte nur dann eingeführt werden, wenn es absolut notwendig ist.",
+      "TDD fördert die Erstellung von Unit-Tests, um sicherzustellen, dass der Code korrekt funktioniert, bevor er in das Projekt integriert wird. Das hilft, Fehler frühzeitig zu erkennen.",
+      "Nutze Git, um den Code zu versionieren, Änderungen nachzuvollziehen und im Team zu arbeiten. Es hilft auch, bei Bedarf auf frühere Versionen zurückzugreifen.",
+      "Baue zuerst für mobile Geräte und erweitere dann für größere Bildschirme. Achte darauf, dass deine Webseiten auf allen Bildschirmgrößen und -auflösungen gut funktionieren.",
+      "Nutze CI/CD-Tools, um sicherzustellen, dass der Code kontinuierlich getestet und automatisch in einer Produktionsumgebung bereitgestellt wird. Dies reduziert manuelle Fehler und steigert die Effizienz.",
+      "Achte auf sichere Codierungspraktiken, wie z.B. das Verhindern von SQL-Injektionen, Cross-Site-Scripting (XSS) und das Verwenden von HTTPS.",
+      "Arbeite in kurzen Sprints, mit regelmäßigen Feedback-Schleifen und Anpassungen, um sicherzustellen, dass das Projekt kontinuierlich in die richtige Richtung geht."
+    ]
+  },
+  "EN":{
+    "colors": "#0e1924",
+    "slides": [
+      "Code should be written in a way that other developers can easily understand and extend it. Use meaningful variable names, avoid overly complex functions, and comment only where necessary.",
+      "Instead of repeating the same code in multiple places, you should encapsulate it in functions or classes that can be used in various parts of the project.",
+      "Implement solutions as simply as possible without compromising quality. Complexity should only be introduced when absolutely necessary.",
+      "TDD encourages the creation of unit tests to ensure the code works correctly before it is integrated into the project. This helps to identify bugs early on.",
+      "Use Git to version your code, track changes, and collaborate with your team. It also helps to revert to previous versions when needed.",
+      "Build for mobile devices first, and then scale up for larger screens. Ensure that your websites work well on all screen sizes and resolutions.",
+      "Use CI/CD tools to ensure the code is continuously tested and automatically deployed to a production environment. This reduces manual errors and increases efficiency.",
+      "Follow secure coding practices, such as preventing SQL injection, Cross-Site Scripting (XSS), and using HTTPS.",
+      "Work in short sprints with regular feedback loops and adjustments to ensure the project stays on track."
+    ]
+  }
+}
