@@ -174,7 +174,7 @@ export const useGlobalSettingsStore = defineStore('globalSettings', () => {
     if (!fontName || fontName.toLowerCase() === 'sans-serif' || fontName.toLowerCase() === 'monospace') return;
 
     const link = document.createElement('link');
-    link.href = `https:
+    link.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(fontName)}&display=swap`;
     link.rel = 'stylesheet';
 
     if (document.head) {
