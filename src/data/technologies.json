@@ -1,28 +1,18 @@
 {
   "frontend": [
     { "name": "Vue.js", "icon": "mdi-vuejs", "color": "#41B883"},
-    { "name": "Vuetify", "icon": "mdi-vuetify", "color": "#1867C0" },
-    { "name": "Naive UI", "icon": "mdi-alpha-n", "color": "#41B883" },
-    { "name": "JavaScript", "icon": "mdi-language-javascript", "color": "#F7DF1E" },
-    { "name": "TypeScript", "icon": "mdi-language-typescript", "color": "#3178C6" }
+    { "name": "JavaScript", "icon": "mdi-language-javascript", "color": "#F7DF1E" }
   ],
   "backend": [
-    { "name": "PHP", "icon": "mdi-language-php", "color": "#4F5B93" },
-    { "name": "Python", "icon": "mdi-language-python", "color": "#306998" },
     { "name": "Node.js", "icon": "mdi-nodejs", "color": "#339933" },
-    { "name": "Express.js", "icon": "mdi-server", "color": "#ffff" },
-    { "name": "Csharp", "icon": "mdi-language-csharp", "color": "#1785B3" },
-    { "name": "RESTful APIs", "icon": "mdi-api", "color": "#E44D26" }
+    { "name": "PHP", "icon": "mdi-language-php", "color": "#4F5B93" }
   ],
   "databases": [
     { "name": "my-SQL", "icon": "mdi-database", "color": "#47A248" },
-    { "name": "PostgreSQL", "icon": "mdi-database", "color": "#336791" },
-    { "name": "Firebase", "icon": "mdi-database", "color": "#FFCA28" }
+    { "name": "PostgreSQL", "icon": "mdi-database", "color": "#336791" }
   ],
   "devops": [
     { "name": "Docker", "icon": "mdi-docker", "color": "#2496ED" },
-    { "name": "CI/CD", "icon": "mdi-cogs", "color": "#f39c12" },
-    { "name": "Git", "icon": "mdi-git", "color": "#F14C28" },
-    { "name": "GitHub", "icon": "mdi-github", "color": "#6cc644" }
+    { "name": "Git", "icon": "mdi-git", "color": "#F14C28" }
   ]
 }

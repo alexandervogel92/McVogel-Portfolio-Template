@@ -35,23 +35,20 @@ export default {
     const slides = ref([]);
     const colors = ref([]);
 
-    // Initialisierung der Werte bei Sprachwechsel
     const updateData = (language) => {
       const upperCaseLanguage = language.toUpperCase();
       slides.value = carouselData[upperCaseLanguage]?.slides || [];
       colors.value = carouselData[upperCaseLanguage]?.colors || [];
     };
 
-    // Initiale Daten laden
     updateData(currentLanguage.value);
 
-    // Watcher hinzufügen, um auf Änderungen von currentLanguage zu reagieren
     watch(
-      () => currentLanguage.value, // Beobachtungsziel
+      () => currentLanguage.value,
       (newValue) => {
-        updateData(newValue); // Update mit neuer Sprache
+        updateData(newValue);
       },
-      { immediate: true } // Sofortige Ausführung beim ersten Laden
+      { immediate: true }
     );
 
     return {
@@ -64,16 +61,16 @@ export default {
 <style scoped lang="scss">
 .v-carousel-item {
   .rounded-corners {
-    border-radius: 16px;  /* Hier runden wir die Ecken ab */
+    border-radius: 16px;  
   }
   .text-body-1 {
     font-size: x-large !important;
     line-height: 1.5;
-    color: #ffffff; /* Weißer Text für bessere Lesbarkeit */
+    color: #ffffff; 
   }
 
   .p-4 {
-    padding: 20px; /* Genügend Abstand um den Text */
+    padding: 20px; 
   }
 }
 </style>

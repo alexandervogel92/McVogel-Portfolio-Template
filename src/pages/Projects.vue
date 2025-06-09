@@ -9,7 +9,6 @@
       <v-progress-circular indeterminate color="primary"></v-progress-circular>
     </div>
     <div v-else>
-      <!-- Listenansicht -->
       <v-row v-if="viewMode === 'list'">
         <v-col cols="12" sm="6" md="4" v-for="project in projects" :key="project.id">
           <v-card>
@@ -21,7 +20,6 @@
           </v-card>
         </v-col>
       </v-row>
-      <!-- Slideransicht -->
       <v-carousel v-else hide-delimiter-background height="300">
         <v-carousel-item v-for="project in projects" :key="project.id">
           <v-sheet class="fill-height" color="primary" dark>
@@ -52,8 +50,7 @@ export default {
     }
   },
   mounted() {
-    // Simulierte API-Anbindung
-    axios.get('api/projects') // Ersetze diesen Link ggf. durch deinen API-Endpunkt
+    axios.get('api/projects')
       .then(response => {
         this.projects = response.data
       })

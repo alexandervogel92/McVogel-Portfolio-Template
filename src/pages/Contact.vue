@@ -23,7 +23,6 @@
 import { ref, computed, inject } from 'vue';
 import ContactForm from '@/components/ContactForm.vue';
 
-// Sprachabhängigkeit
 const currentLanguage = inject<Ref<'DE' | 'EN'>>('currentLanguage', ref('DE'));
 
 const pageTitle = computed(() => currentLanguage.value === 'DE' ? 'Kontakt aufnehmen' : 'Get in Touch');
@@ -33,9 +32,9 @@ const pageSubtitle = computed(() => currentLanguage.value === 'DE' ? 'Ich freue 
 
 <style scoped lang="scss">
 .v-card {
-  background-color: var(--container-color); /* Nutze Theme-Farbe */
+  background-color: var(--container-color); 
 }
 .v-card-title, .v-card-subtitle {
-  color: var(--heading-color); /* Nutze Theme-Farbe */
+  color: var(--heading-color); 
 }
 </style>

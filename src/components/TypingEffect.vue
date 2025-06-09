@@ -37,26 +37,21 @@ export default {
       if (this.completed) return;
 
       if (!this.deleting) {
-        // Schreiben des Textes
         if (this.index < this.text.length) {
           this.displayText = this.text.slice(0, this.index + 1);
           this.index++;
           setTimeout(this.type, typingSpeed);
         } else {
-          // Pause vor dem Löschen
           this.deleting = true;
           setTimeout(this.type, pauseSpeed);
         }
       } else {
-        // Löschen der letzten zwei Buchstaben
         if (this.index > this.text.length - 3) {
           this.index--;
           this.displayText = this.text.slice(0, this.index);
           setTimeout(this.type, deletingSpeed);
         } else {
-          // Ersetzen der letzten zwei Buchstaben
           this.displayText = this.text.slice(0, -3) + this.replacement;
-          // this.completed = true;
         }
       }
     },

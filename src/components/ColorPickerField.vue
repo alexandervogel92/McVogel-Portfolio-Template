@@ -4,7 +4,6 @@
       :close-on-content-click="false"
       max-width="320"
   >
-    <!-- Activator: Button und HEX-Anzeige nebeneinander -->
     <template #activator="{ props }">
       <div class="activator-wrapper">
         <v-btn
@@ -18,7 +17,6 @@
       </div>
     </template>
 
-    <!-- Color Picker im Menü -->
     <v-color-picker
         v-model="color"
         hide-mode-switch
@@ -32,14 +30,11 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
 
-// Props & Emit
 const props = defineProps<{ modelValue: string }>();
 const emit = defineEmits<{ (e: 'update:modelValue', value: string): void }>();
 
-// Menü-Status
 const menu = ref(false);
 
-// Zwei-Wege-Binding auf modelValue
 const color = computed<string>({
   get: () => props.modelValue || '#ffffff',
   set: (val: string) => emit('update:modelValue', val),

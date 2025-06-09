@@ -1,4 +1,3 @@
-// Composables
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -11,41 +10,30 @@ const routes = [
       icon: 'mdi-home',
     }
   },
-  // --- NEUE ROUTE FÜR KONTAKT ---
   {
     path: '/contact',
     name: 'Contact',
     component: () => import('@/pages/Contact.vue'),
     meta: {
       showInTabs: true,
-      icon: 'mdi-email-outline', // Passendes Icon
+      icon: 'mdi-email-outline',
     }
   },
   {
     path: '/resume',
     name: 'Resume',
-    component: () => import('@/pages/Resume.vue'), // Verweist auf die neue Seite
+    component: () => import('@/pages/Resume.vue'),
     meta: {
-      showInTabs: true, // In Navigation anzeigen?
-      icon: 'mdi-file-account-outline', // Passendes Icon
+      showInTabs: true,
+      icon: 'mdi-file-account-outline',
     }
   },
-  // --- Beispiel für weitere Routen ---
-  // {
-  //   path: '/projects',
-  //   name: 'Projects',
-  //   component: () => import('@/pages/Projects.vue'), // Beispiel-Komponente
-  //   meta: {
-  //     showInTabs: true,
-  //     icon: 'mdi-folder-outline',
-  //   }
-  // },
-  { // Catch-all Route für 404
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () => import('@/pages/NotFound.vue'), // Erstelle eine NotFound.vue Seite
+    component: () => import('@/pages/NotFound.vue'),
     meta: {
-      showInTabs: false, // Nicht in Tabs anzeigen
+      showInTabs: false,
     }
   },
 ]
@@ -53,7 +41,6 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  // Scroll-Verhalten: Gehe nach oben, wenn Route wechselt
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition;

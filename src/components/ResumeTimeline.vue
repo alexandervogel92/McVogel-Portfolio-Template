@@ -2,7 +2,6 @@
   <v-container>
     <v-row justify="center">
       <v-col cols="12" md="10" lg="8">
-        <!--Eigene Projekte-->
         <h3 class="text-h5 mb-3" :style="{ color: 'var(--heading-color)' }">
           <v-icon start color="primary"> mdi-briefcase-outline </v-icon>
           {{ content.projectsTitle }}
@@ -70,7 +69,6 @@
           </v-timeline-item>
         </v-timeline>
 
-        <!--Ausbildungs Bereich-->
         <h3 class="text-h5 mb-3" :style="{ color: 'var(--heading-color)' }">
           <v-icon start color="primary"> mdi-school-outline </v-icon>
           {{ content.educationTitle }}
@@ -130,7 +128,6 @@
           </v-timeline-item>
         </v-timeline>
 
-        <!--Kenntnisse -->
         <div>
           <h3
             class="text-h5 mb-3 mt-3"
@@ -203,7 +200,6 @@
             </v-timeline-item>
           </v-timeline>
         </div>
-      <!--Kentnisse-->
       </v-col>
     </v-row>
   </v-container>
@@ -213,11 +209,9 @@
 import { computed, inject, ref, Ref } from "vue";
 import resumeData from "@/data/resumeData.json";
 
-// Sprachabhängigkeit
 const currentLanguage = inject<Ref<"DE" | "EN">>("currentLanguage", ref("DE"));
 const content = computed(() => resumeData[currentLanguage.value]);
 
-// Funktion zum Ersetzen von "Present" oder "Heute"
 const formatPeriod = (period: string) => {
   if (!period) return "";
   if (period.includes("Present") || period.includes("Heute")) {
@@ -230,9 +224,7 @@ const formatPeriod = (period: string) => {
 </script>
 
 <style scoped lang="scss">
-/* --------------------------------------------
-   Allgemeine Timeline-Einstellungen
----------------------------------------------*/
+
 .timeline-condensed {
   overflow-x: hidden;
   width: 100%;
@@ -250,9 +242,7 @@ const formatPeriod = (period: string) => {
   }
 }
 
-/* --------------------------------------------
-   Card-Layout begrenzen
----------------------------------------------*/
+
 .timeline-card {
   box-sizing: border-box;
   max-width: 100%;
@@ -262,7 +252,7 @@ const formatPeriod = (period: string) => {
   padding: 4px 8px !important;
 }
 
-/* internes Padding entfernen */
+
 .v-card > .v-card-title,
 .v-card > .v-card-subtitle,
 .v-card > .v-card-text {
@@ -270,7 +260,7 @@ const formatPeriod = (period: string) => {
   line-height: 1.3 !important;
 }
 
-/* Überschriften & Textblöcke umbrechen */
+
 ::v-deep .v-card-title,
 ::v-deep .v-card-subtitle,
 ::v-deep .v-card-text {
@@ -279,9 +269,7 @@ const formatPeriod = (period: string) => {
   overflow-wrap: anywhere !important;
 }
 
-/* --------------------------------------------
-   Listen (Skills & Description) als Flex-Wrap
----------------------------------------------*/
+
 .timeline-card ul {
   display: flex;
   flex-wrap: wrap;
@@ -290,25 +278,19 @@ const formatPeriod = (period: string) => {
   padding: 0;
 }
 
-/* Abstand der Listeneinträge */
+
 .timeline-card ul li {
   margin: 0.2rem;
 }
 
-/* --------------------------------------------
-   Eigene Klasse: Verhindert Wortbruch in Skills
-   => bitte jedes <li> in deinen Skill-Listen
-      um class="skill-item" ergänzen!
----------------------------------------------*/
+
 .skill-item {
   white-space: nowrap !important;
   overflow-wrap: normal !important;
   word-break: normal !important;
 }
 
-/* --------------------------------------------
-   Timeline passt Höhe ans Material an
----------------------------------------------*/
+
 .v-timeline--vertical.v-timeline {
   height: auto !important;
 }

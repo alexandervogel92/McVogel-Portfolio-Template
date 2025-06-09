@@ -1,11 +1,8 @@
-// src/store/globalSettings.ts
 import { defineStore } from 'pinia';
 import { ref, watch, computed } from 'vue';
 import { useTheme } from 'vuetify';
 
-// Definiere die Struktur für die Theme-Einstellungen
 interface ThemeSettings {
-  // Kernfarben (werden direkt an Vuetify übergeben)
   primary: string;
   secondary: string;
   accent: string;
@@ -13,20 +10,18 @@ interface ThemeSettings {
   info: string;
   success: string;
   warning: string;
-  // Zusätzliche Farben & Schriftart (werden über CSS Variablen gesteuert)
   headingColor: string;
   bodyColor: string;
   backgroundColor: string;
   containerColor: string;
-  buttonColor: string; // Neu: Button Hintergrundfarbe
-  buttonTextColor: string; // Neu: Button Textfarbe
-  navBackgroundColor: string; // Neu: Navigationshintergrund
-  navTextColor: string; // Neu: Navigationstextfarbe
+  buttonColor: string;
+  buttonTextColor: string;
+  navBackgroundColor: string;
+  navTextColor: string;
   fontFamily: string;
-  [key: string]: string; // Index-Signatur für dynamischen Zugriff
+  [key: string]: string;
 }
 
-// Liste vordefinierter Schriftarten (Beispiele)
 export const availableFonts = [
   { title: 'Roboto (Standard)', value: 'Roboto, sans-serif' },
   { title: 'Open Sans', value: '"Open Sans", sans-serif' },
@@ -35,24 +30,23 @@ export const availableFonts = [
   { title: 'Source Code Pro', value: '"Source Code Pro", monospace' },
 ];
 
-// Standardwerte für das Theme
 const defaultThemeSettings: ThemeSettings = {
-  primary: '#2196F3', // Helleres Blau als Beispiel
-  secondary: '#607D8B', // Blau-Grau
-  accent: '#FFC107', // Amber Akzent
-  error: '#F44336', // Rot
-  info: '#03A9F4', // Hellblau
-  success: '#4CAF50', // Grün
-  warning: '#FF9800', // Orange
-  headingColor: '#E0E0E0', // Helleres Grau für Überschriften im Dark Mode
-  bodyColor: '#B0BEC5', // Blau-Grau für Text
-  backgroundColor: '#121212', // Dunkler Hintergrund
-  containerColor: '#1E1E1E', // Etwas hellerer Container/Karten Hintergrund
-  buttonColor: '#2196F3', // Button nutzt Primärfarbe standardmäßig
-  buttonTextColor: '#FFFFFF', // Weißer Text auf Buttons
-  navBackgroundColor: '#1E1E1E', // Navigationshintergrund wie Container
-  navTextColor: '#B0BEC5', // Navigationstext wie Body
-  fontFamily: availableFonts[0].value, // Standard: Roboto
+  primary: '#2196F3',
+  secondary: '#607D8B',
+  accent: '#FFC107',
+  error: '#F44336',
+  info: '#03A9F4',
+  success: '#4CAF50',
+  warning: '#FF9800',
+  headingColor: '#E0E0E0',
+  bodyColor: '#B0BEC5',
+  backgroundColor: '#121212',
+  containerColor: '#1E1E1E',
+  buttonColor: '#2196F3',
+  buttonTextColor: '#FFFFFF',
+  navBackgroundColor: '#1E1E1E',
+  navTextColor: '#B0BEC5',
+  fontFamily: availableFonts[0].value,
 };
 
 const defaultLightThemeSettings: ThemeSettings = {
@@ -63,9 +57,9 @@ const defaultLightThemeSettings: ThemeSettings = {
   info: '#2196F3',
   success: '#4CAF50',
   warning: '#FB8C00',
-  headingColor: '#333333',   // Beispielwerte für Light Mode
+  headingColor: '#333333',
   bodyColor: '#333333',
-  backgroundColor: '#FFFFFF', // Heller Hintergrund
+  backgroundColor: '#FFFFFF',
   containerColor: '#FFFFFF',
   buttonColor: '#1976D2',
   buttonTextColor: '#FFFFFF',
@@ -84,7 +78,7 @@ const defaultDarkThemeSettings: ThemeSettings = {
   warning: '#FF9800',
   headingColor: '#E0E0E0',
   bodyColor: '#B0BEC5',
-  backgroundColor: '#121212', // Dunkler Hintergrund
+  backgroundColor: '#121212',
   containerColor: '#1E1E1E',
   buttonColor: '#2196F3',
   buttonTextColor: '#FFFFFF',
@@ -93,21 +87,19 @@ const defaultDarkThemeSettings: ThemeSettings = {
   fontFamily: availableFonts[0].value,
 };
 
-// Helper Funktion zum Laden aus LocalStorage
 function loadFromLocalStorage<T>(key: string, defaultValue: T): T {
   if (typeof window !== 'undefined') {
     const storedValue = localStorage.getItem(key);
     if (storedValue) {
       try {
         const parsed = JSON.parse(storedValue) as T;
-        // Beispielhafte Validierung für die Sprache:
         if (key === 'portfolioLanguage' && parsed !== 'DE' && parsed !== 'EN') {
           throw new Error('Ungültiger Sprachwert');
         }
         return parsed;
       } catch (e) {
         console.error(`Error parsing localStorage key "${key}":`, e);
-        localStorage.removeItem(key); // Entferne den ungültigen Wert
+        localStorage.removeItem(key);
       }
     }
   }
@@ -115,7 +107,6 @@ function loadFromLocalStorage<T>(key: string, defaultValue: T): T {
 }
 
 
-// Helper Funktion zum Speichern in LocalStorage
 function saveToLocalStorage<T>(key: string, value: T) {
   if (typeof window !== 'undefined') {
     localStorage.setItem(key, JSON.stringify(value));
@@ -125,7 +116,6 @@ function saveToLocalStorage<T>(key: string, value: T) {
 export const useGlobalSettingsStore = defineStore('globalSettings', () => {
   const theme = useTheme();
 
-  // --- Reactive State ---
   const currentLanguage = ref<'DE' | 'EN'>(loadFromLocalStorage<'DE' | 'EN'>('portfolioLanguage', 'DE'));
   const themeMode = ref<'light' | 'dark'>(loadFromLocalStorage<'light' | 'dark'>('portfolioThemeMode', 'dark'));
   const lightThemeSettings = ref<ThemeSettings>(
@@ -139,11 +129,8 @@ export const useGlobalSettingsStore = defineStore('globalSettings', () => {
     themeMode.value === 'light' ? lightThemeSettings.value : darkThemeSettings.value
   );
 
-  // --- Computed ---
-  // Berechne, ob die aktuelle Schriftart die Standard-Schriftart ist
   const isDefaultFont = computed(() => themeSettings.value.fontFamily === defaultThemeSettings.fontFamily);
 
-  // --- Actions ---
   function toggleLanguage() {
     currentLanguage.value = currentLanguage.value === 'DE' ? 'EN' : 'DE';
   }
@@ -174,53 +161,36 @@ export const useGlobalSettingsStore = defineStore('globalSettings', () => {
     }
   }
 
-  // ============================================================
-  // HILFSFUNKTIONEN FÜR STYLES (VOR WATCHERS DEFINIEREN)
-  // ============================================================
 
-  // Set zum Speichern bereits geladener Fonts
   const loadedFonts = new Set<string>();
 
-  // Funktion zum dynamischen Laden von Google Fonts
   function loadGoogleFont(fontFamily: string) {
-    // Sicherstellen, dass wir im Browser-Kontext sind
     if (typeof window === 'undefined' || typeof document === 'undefined') return;
 
-    // Nicht laden, wenn es die Standard-Schriftart ist oder bereits geladen wurde
     if (isDefaultFont.value || loadedFonts.has(fontFamily)) return;
 
-    // Extrahiere Font-Namen (vereinfachte Annahme: erster Teil vor Komma)
     const fontName = fontFamily.split(',')[0].replace(/['"]/g, '').trim();
 
-    // Nicht für generische Fallbacks wie 'sans-serif' laden
     if (!fontName || fontName.toLowerCase() === 'sans-serif' || fontName.toLowerCase() === 'monospace') return;
 
-    // Erstelle Link-Element für Google Fonts
     const link = document.createElement('link');
-    // Beispiel: Lade regular (400) & bold (700) Schriftschnitte
-    link.href = `https://fonts.googleapis.com/css2?family=${fontName.replace(/ /g, '+')}:wght@400;700&display=swap`;
+    link.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(fontName)}&display=swap`;
     link.rel = 'stylesheet';
 
-    // Füge Link zum <head> hinzu und markiere Font als geladen
-    // Stelle sicher, dass document.head existiert
     if (document.head) {
       document.head.appendChild(link);
-      loadedFonts.add(fontFamily); // Markiere als geladen
-      console.log(`Font '${fontName}' loaded.`);
+      loadedFonts.add(fontFamily);
     } else {
       console.error("Could not find document.head to append font link.");
     }
   }
 
-  // Funktion zum Anwenden der benutzerdefinierten Farben und Stile
   function applyCustomStyles(settings: ThemeSettings) {
-    // Wende Kernfarben auf das *beide* Vuetify Themes an (Light & Dark)
     ['light', 'dark'].forEach(mode => {
-      // Sicherstellen, dass das Theme existiert
       if (theme.themes.value[mode]) {
         const currentTheme = theme.themes.value[mode];
         currentTheme.colors = {
-          ...currentTheme.colors, // Behalte andere Standardfarben bei
+          ...currentTheme.colors,
           primary: settings.primary,
           secondary: settings.secondary,
           accent: settings.accent,
@@ -228,15 +198,14 @@ export const useGlobalSettingsStore = defineStore('globalSettings', () => {
           info: settings.info,
           success: settings.success,
           warning: settings.warning,
-          background: settings.backgroundColor, // Hintergrund auch direkt setzen
-          surface: settings.containerColor, // Surface (für Karten etc.) auch setzen
+          background: settings.backgroundColor,
+          surface: settings.containerColor,
         };
       } else {
         console.warn(`Vuetify theme '${mode}' not found.`);
       }
     });
 
-    // Wende andere Stile über CSS Variablen an (nur im Browser)
     if (typeof document !== 'undefined' && document.documentElement) {
       const rootStyle = document.documentElement.style;
       rootStyle.setProperty('--heading-color', settings.headingColor);
@@ -249,22 +218,15 @@ export const useGlobalSettingsStore = defineStore('globalSettings', () => {
       rootStyle.setProperty('--nav-text-color', settings.navTextColor);
       rootStyle.setProperty('--font-family', settings.fontFamily);
 
-      // Setze globale Schriftart auf body (wichtiger als v-app für Vererbung)
-      // Stelle sicher, dass document.body existiert
       if (document.body) {
         document.body.style.fontFamily = settings.fontFamily;
       }
 
-      // Lade Google Font dynamisch, falls nötig
       loadGoogleFont(settings.fontFamily);
     }
   }
 
-  // ============================================================
-  // WATCHERS (NACH DEFINITION DER HILFSFUNKTIONEN)
-  // ============================================================
 
-  // Speichern im LocalStorage bei Änderungen
   watch(currentLanguage, (newLang) => saveToLocalStorage('portfolioLanguage', newLang));
 
   watch(themeMode, (newMode) => {
@@ -289,21 +251,16 @@ export const useGlobalSettingsStore = defineStore('globalSettings', () => {
   }, { deep: true, immediate: true });
 
 
-  // ============================================================
-  // RETURN STATEMENT
-  // ============================================================
   return {
     currentLanguage,
     themeMode,
     themeSettings,
-    isDefaultFont, // Exportiere computed property
+    isDefaultFont,
     toggleLanguage,
     setLanguage,
     toggleTheme,
     setThemeMode,
     resetThemeSettings,
-    updateThemeSetting, // Exportiere die Update-Funktion
-    // applyCustomStyles und loadGoogleFont müssen nicht exportiert werden,
-    // da sie nur intern durch die Watcher verwendet werden.
+    updateThemeSetting,
   };
 });
