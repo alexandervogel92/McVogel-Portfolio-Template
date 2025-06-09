@@ -23,9 +23,9 @@ const currentLanguage = computed(() => store.currentLanguage)
 provide('currentLanguage', currentLanguage)
 
 const appStyles = computed(() => ({
-  fontFamily: store.themeSettings.fontFamily,
-  backgroundColor: store.themeSettings.backgroundColor,
-  color: store.themeSettings.bodyColor,
+  fontFamily: store.fontFamily,
+  backgroundColor: 'var(--background-color)',
+  color: 'var(--body-color)',
 }))
 </script>
 

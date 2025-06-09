@@ -2,31 +2,31 @@
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 import { createVuetify, ThemeDefinition } from 'vuetify'
-import { useGlobalSettingsStore } from '@/store/globalSettings';
+import { lightThemeColors, darkThemeColors } from '@/styles/themeColors'
 
 const defaultLightColors = {
-  primary: '#1976D2',
-  secondary: '#424242',
-  accent: '#82B1FF',
-  error: '#FF5252',
-  info: '#2196F3',
-  success: '#4CAF50',
-  warning: '#FB8C00',
-  background: '#FFFFFF',
-  surface: '#FFFFFF',
-};
+  primary: lightThemeColors.primary,
+  secondary: lightThemeColors.secondary,
+  accent: lightThemeColors.accent,
+  error: lightThemeColors.error,
+  info: lightThemeColors.info,
+  success: lightThemeColors.success,
+  warning: lightThemeColors.warning,
+  background: lightThemeColors.backgroundColor,
+  surface: lightThemeColors.containerColor,
+}
 
 const defaultDarkColors = {
-  primary: '#1976D2',
-  secondary: '#424242',
-  accent: '#82B1FF',
-  error: '#FF5252',
-  info: '#2196F3',
-  success: '#4CAF50',
-  warning: '#FB8C00',
-  background: '#121212',
-  surface: '#1E1E1E',
-};
+  primary: darkThemeColors.primary,
+  secondary: darkThemeColors.secondary,
+  accent: darkThemeColors.accent,
+  error: darkThemeColors.error,
+  info: darkThemeColors.info,
+  success: darkThemeColors.success,
+  warning: darkThemeColors.warning,
+  background: darkThemeColors.backgroundColor,
+  surface: darkThemeColors.containerColor,
+}
 
 const lightTheme: ThemeDefinition = {
   dark: false,

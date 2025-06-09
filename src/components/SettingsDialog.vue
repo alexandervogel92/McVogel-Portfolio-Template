@@ -1,6 +1,6 @@
 <template>
-  <v-dialog v-model="internalDialog" max-width="600" scrollable>
-    <v-card :style="{ fontFamily: store.themeSettings.fontFamily }">
+    <v-dialog v-model="internalDialog" max-width="600" scrollable>
+      <v-card :style="{ fontFamily: store.fontFamily }">
       <v-card-title class="d-flex justify-space-between align-center">
         <span>{{ store.currentLanguage === 'DE' ? 'Einstellungen' : 'Settings' }}</span>
         <v-btn icon @click="closeDialog" density="compact" variant="text">
@@ -72,8 +72,8 @@
                   <v-col cols="4"><span class="text-caption">{{ fieldLabels.fontFamily }}</span></v-col>
                   <v-col cols="8">
                     <v-select
-                      :model-value="store.themeSettings.fontFamily"
-                      @update:model-value="store.updateThemeSetting('fontFamily', $event)"
+                      :model-value="store.fontFamily"
+                      @update:model-value="store.setFontFamily($event)"
                       :items="availableFonts"
                       item-title="title"
                       item-value="value"
@@ -82,20 +82,6 @@
                       variant="outlined"
                     ></v-select>
                   </v-col>
-                </v-row>
-
-                <v-row v-for="key in themeSettingKeys" :key="key" class="align-center dense-row">
-                  <template v-if="key !== 'fontFamily'">
-                    <v-col cols="4">
-                      <span class="text-caption">{{ fieldLabels[key] || key }}</span>
-                    </v-col>
-                    <v-col cols="8">
-                      <ColorPickerField
-                        :model-value="store.themeSettings[key]"
-                        @update:model-value="store.updateThemeSetting(key, $event)"
-                      />
-                    </v-col>
-                  </template>
                 </v-row>
               </v-container>
             </v-expansion-panel-text>
@@ -106,10 +92,6 @@
       <v-divider></v-divider>
 
       <v-card-actions>
-        <v-btn text @click="store.resetThemeSettings" color="warning">
-          <v-icon start>mdi-restore</v-icon>
-          {{ store.currentLanguage === 'DE' ? 'Zurücksetzen' : 'Reset' }}
-        </v-btn>
         <v-spacer></v-spacer>
         <v-btn text @click="closeDialog" color="primary">
           {{ store.currentLanguage === 'DE' ? 'Schließen' : 'Close' }}
@@ -122,7 +104,6 @@
 <script lang="ts" setup>
 import { ref, watch, computed } from 'vue';
 import { useGlobalSettingsStore, availableFonts } from '@/store/globalSettings.ts';
-import ColorPickerField from './ColorPickerField.vue';
 
 const props = defineProps({
   modelValue: {
@@ -143,27 +124,8 @@ watch(internalDialog, (val) => {
 });
 
 const fieldLabels = computed(() => ({
-  primary: store.currentLanguage === 'DE' ? 'Primärfarbe' : 'Primary',
-  secondary: store.currentLanguage === 'DE' ? 'Sekundärfarbe' : 'Secondary',
-  accent: store.currentLanguage === 'DE' ? 'Akzentfarbe' : 'Accent',
-  error: 'Error',
-  info: 'Info',
-  success: 'Success',
-  warning: 'Warning',
-  headingColor: store.currentLanguage === 'DE' ? 'Überschriften' : 'Heading Color',
-  bodyColor: store.currentLanguage === 'DE' ? 'Textfarbe' : 'Body Text Color',
-  backgroundColor: store.currentLanguage === 'DE' ? 'Hintergrund' : 'Background',
-  containerColor: store.currentLanguage === 'DE' ? 'Container' : 'Container Color',
-  buttonColor: store.currentLanguage === 'DE' ? 'Button Farbe' : 'Button Color',
-  buttonTextColor: store.currentLanguage === 'DE' ? 'Button Text' : 'Button Text',
-  navBackgroundColor: store.currentLanguage === 'DE' ? 'Nav Hintergrund' : 'Nav Background',
-  navTextColor: store.currentLanguage === 'DE' ? 'Nav Text' : 'Nav Text',
-  fontFamily: store.currentLanguage === 'DE' ? 'Schriftart' : 'Font Family'
+  fontFamily: store.currentLanguage === 'DE' ? 'Schriftart' : 'Font Family',
 }));
-
-const themeSettingKeys = computed(() =>
-  Object.keys(store.themeSettings)
-);
 
 
 function closeDialog() {
