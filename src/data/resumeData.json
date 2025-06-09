@@ -1,0 +1,168 @@
+{
+  "DE": {
+    "title": "Lebenslauf",
+    "experienceTitle": "Beruflicher Werdegang",
+    "educationTitle": "Ausbildung",
+    "skillsTitle": "Kenntnisse",
+    "hardSkillsTitle": "Hard Skills",
+    "softSkillsTitle": "Soft Skills",
+    "present": "Heute",
+    "workExperience": [
+      {
+        "id": 1,
+        "title": "Jobtitel",
+        "company": "Firma",
+        "location": "Ort",
+        "period": "Jahr - Jahr",
+        "description": ["Füge hier deine Arbeitserfahrung ein."],
+        "skillsUsed": ["Skill 1", "Skill 2"]
+      },
+      {
+        "id": 2,
+        "title": "Jobtitel",
+        "company": "Firma",
+        "location": "Ort",
+        "period": "Jahr - Jahr",
+        "description": ["Füge hier deine Arbeitserfahrung ein."],
+        "skillsUsed": ["Skill 1", "Skill 2"]
+      }
+    ],
+    "education": [
+      {
+        "id": 101,
+        "title": "Ausbildung",
+        "company": "Ausbildungsbetrieb",
+        "location": "Ort",
+        "period": "Jahr - Jahr",
+        "description": "Füge hier deine Ausbildung ein.",
+        "skillsUsed": []
+      },
+      {
+        "id": 102,
+        "title": "Weiterbildung",
+        "company": "Institut",
+        "location": "Ort",
+        "period": "Jahr - Jahr",
+        "description": "Füge hier weitere Ausbildung ein.",
+        "skillsUsed": []
+      }
+    ],
+    "projectsTitle": "Projekte",
+    "projects": [
+      {
+        "id": 1,
+        "title": "Projekt",
+        "role": "Rolle",
+        "description": "Füge hier eine Projektbeschreibung ein.",
+        "skillsUsed": ["Skill 1", "Skill 2"],
+        "link": "https://example.com"
+      },
+      {
+        "id": 2,
+        "title": "Projekt",
+        "role": "Rolle",
+        "description": "Füge hier eine Projektbeschreibung ein.",
+        "skillsUsed": ["Skill 1", "Skill 2"],
+        "link": "https://example.com"
+      }
+    ],
+    "hardSkills": [
+      { "name": "Vue.js", "icon": "mdi-vuejs", "category": "Frontend" },
+      { "name": "Vuetify", "icon": "mdi-vuetify", "category": "Frontend" },
+      { "name": "JavaScript", "icon": "mdi-language-javascript", "category": "Core" },
+      { "name": "TypeScript", "icon": "mdi-language-typescript", "category": "Core" },
+      { "name": "Node.js", "icon": "mdi-nodejs", "category": "Backend" },
+      { "name": "Express.js", "icon": "mdi-server", "category": "Backend" },
+      { "name": "SQL", "icon": "mdi-database", "category": "Databases" },
+      { "name": "MongoDB", "icon": "mdi-database", "category": "Databases" },
+      { "name": "Docker", "icon": "mdi-docker", "category": "DevOps" },
+      { "name": "CI/CD", "icon": "mdi-server", "category": "DevOps" },
+      { "name": "Git", "icon": "mdi-git", "category": "Tools" },
+      { "name": "Linux", "icon": "mdi-linux", "category": "Tools" }
+    ],
+    "softSkills": ["Teamfähigkeit", "Lernbereitschaft"]
+  },
+  "EN": {
+    "title": "Resume",
+    "experienceTitle": "Work Experience",
+    "educationTitle": "Education",
+    "skillsTitle": "Skills",
+    "hardSkillsTitle": "Hard Skills",
+    "softSkillsTitle": "Soft Skills",
+    "present": "Present",
+    "workExperience": [
+      {
+        "id": 1,
+        "title": "Job Title",
+        "company": "Company",
+        "location": "Location",
+        "period": "Year - Year",
+        "description": ["Add your job description here."],
+        "skillsUsed": ["Skill 1", "Skill 2"]
+      },
+      {
+        "id": 2,
+        "title": "Job Title",
+        "company": "Company",
+        "location": "Location",
+        "period": "Year - Year",
+        "description": ["Add your job description here."],
+        "skillsUsed": ["Skill 1", "Skill 2"]
+      }
+    ],
+    "education": [
+      {
+        "id": 101,
+        "title": "Education",
+        "company": "Institution",
+        "location": "Location",
+        "period": "Year - Year",
+        "description": "Add your education here.",
+        "skillsUsed": []
+      },
+      {
+        "id": 102,
+        "title": "Additional Training",
+        "company": "Institution",
+        "location": "Location",
+        "period": "Year - Year",
+        "description": "Add more education here.",
+        "skillsUsed": []
+      }
+    ],
+    "projectsTitle": "Projects",
+    "projects": [
+      {
+        "id": 1,
+        "title": "Project",
+        "role": "Role",
+        "description": "Add a short project description here.",
+        "skillsUsed": ["Skill 1", "Skill 2"],
+        "link": "https://example.com"
+      },
+      {
+        "id": 2,
+        "title": "Project",
+        "role": "Role",
+        "description": "Add a short project description here.",
+        "skillsUsed": ["Skill 1", "Skill 2"],
+        "link": "https://example.com"
+      }
+    ],
+    "hardSkills": [
+      { "name": "Vue.js", "icon": "mdi-vuejs", "category": "Frontend" },
+      { "name": "Vuetify", "icon": "mdi-vuetify", "category": "Frontend" },
+      { "name": "JavaScript", "icon": "mdi-language-javascript", "category": "Core" },
+      { "name": "TypeScript", "icon": "mdi-language-typescript", "category": "Core" },
+      { "name": "Node.js", "icon": "mdi-nodejs", "category": "Backend" },
+      { "name": "Express.js", "icon": "mdi-server", "category": "Backend" },
+      { "name": "SQL", "icon": "mdi-database", "category": "Databases" },
+      { "name": "MongoDB", "icon": "mdi-database", "category": "Databases" },
+      { "name": "Docker", "icon": "mdi-docker", "category": "DevOps" },
+      { "name": "CI/CD", "icon": "mdi-server", "category": "DevOps" },
+      { "name": "Git", "icon": "mdi-git", "category": "Tools" },
+      { "name": "Linux", "icon": "mdi-linux", "category": "Tools" }
+    ],
+    "softSkills": ["Team player", "Willingness to learn"]
+  }
+}

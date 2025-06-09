@@ -1,0 +1,18 @@
+{
+  "DE": {
+    "welcome": "Willkommen ich bin",
+    "name": "Your Name",
+    "title": "Über Mich",
+    "description": "Füge hier eine kurze Selbstbeschreibung ein.",
+    "technologies": "Technologien, mit denen ich arbeite",
+    "contact_me": "Kontakt aufnehmen"
+  },
+  "EN": {
+    "welcome": "Welcome I am",
+    "name": "Your Name",
+    "title": "About Me",
+    "description": "Add a brief description about yourself here.",
+    "technologies": "Technologies I Work With",
+    "contact_me": "Get in Touch"
+  }
+}

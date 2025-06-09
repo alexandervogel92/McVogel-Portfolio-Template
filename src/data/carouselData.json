@@ -1,0 +1,18 @@
+{
+  "DE": {
+    "colors": "#0e1924",
+    "slides": [
+      "Füge hier Text für Slide 1 ein.",
+      "Füge hier Text für Slide 2 ein.",
+      "Füge hier Text für Slide 3 ein."
+    ]
+  },
+  "EN": {
+    "colors": "#0e1924",
+    "slides": [
+      "Add slide text 1 here.",
+      "Add slide text 2 here.",
+      "Add slide text 3 here."
+    ]
+  }
+}
