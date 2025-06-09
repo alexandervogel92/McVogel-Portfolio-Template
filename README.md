@@ -44,10 +44,29 @@ export const lightThemeColors = {
 
 Users can switch between a light and dark theme and choose a font in the settings dialog. Available fonts are defined in `src/store/globalSettings.ts`.
 
+## Contact Form
+
+The form shown on the contact page is implemented in `src/components/ContactForm.vue`.
+It uses [vue-recaptcha-v3](https://github.com/dongido/vue-recaptcha-v3) to protect
+against spam. To enable it you must provide a Google reCAPTCHA V3 site key via
+the `VITE_RECAPTCHA_SITE_KEY` environment variable. Create a `.env` file in the
+project root and add your key:
+
+```bash
+VITE_RECAPTCHA_SITE_KEY=your_site_key_here
+```
+
+The component submits the form data to `/api/contact`. You need to implement
+this endpoint yourself to verify the reCAPTCHA token and send the email. Any
+service can be used (for example a small Node backend using Mailjet).
+
 ## Adding/Editing Pages
 
 Pages are placed under `src/pages` and automatically become routes. Components under `src/components` are auto imported so you can simply create a new file and use it in your templates.
 
 ## License
 
-This template is provided without any warranty. Feel free to adapt it for your own portfolio.
+This project is released under the terms of the repository specific license
+found in [`LICENSE`](LICENSE). You may use and modify the template freely, but
+a visible credit linking to this repository must remain on any website built
+with it.

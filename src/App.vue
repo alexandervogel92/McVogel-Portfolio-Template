@@ -8,12 +8,14 @@
         </transition>
       </router-view>
     </v-main>
+    <AppFooter />
   </v-app>
 </template>
 
 <script lang="ts" setup>
 import { computed, provide } from 'vue'
 import Navigation from '@/components/Navigation.vue'
+import AppFooter from '@/components/AppFooter.vue'
 import { useGlobalSettingsStore } from '@/store/globalSettings'
 
 const store = useGlobalSettingsStore()
