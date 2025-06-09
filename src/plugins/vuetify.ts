@@ -1,13 +1,9 @@
-// src/plugins/vuetify.ts
 
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 import { createVuetify, ThemeDefinition } from 'vuetify'
-import { useGlobalSettingsStore } from '@/store/globalSettings'; // Import store to access defaults if needed
+import { useGlobalSettingsStore } from '@/store/globalSettings';
 
-// Hole Standardeinstellungen (optional, falls du sie hier brauchst)
-// Beachte: Pinia ist hier möglicherweise noch nicht vollständig initialisiert.
-// Es ist sicherer, die Standardwerte direkt hier zu definieren oder aus einer einfachen Konstanten-Datei zu laden.
 const defaultLightColors = {
   primary: '#1976D2',
   secondary: '#424242',
@@ -16,20 +12,20 @@ const defaultLightColors = {
   info: '#2196F3',
   success: '#4CAF50',
   warning: '#FB8C00',
-  background: '#FFFFFF', // Standard Light Background
-  surface: '#FFFFFF', // Standard Light Surface
+  background: '#FFFFFF',
+  surface: '#FFFFFF',
 };
 
 const defaultDarkColors = {
-  primary: '#1976D2', // Beispiel Blau
-  secondary: '#424242', // Beispiel Grau
-  accent: '#82B1FF', // Beispiel Hellblau
-  error: '#FF5252', // Beispiel Rot
-  info: '#2196F3', // Beispiel Info Blau
-  success: '#4CAF50', // Beispiel Grün
-  warning: '#FB8C00', // Beispiel Orange
-  background: '#121212', // Standard Dark Background
-  surface: '#1E1E1E', // Standard Dark Surface
+  primary: '#1976D2',
+  secondary: '#424242',
+  accent: '#82B1FF',
+  error: '#FF5252',
+  info: '#2196F3',
+  success: '#4CAF50',
+  warning: '#FB8C00',
+  background: '#121212',
+  surface: '#1E1E1E',
 };
 
 const lightTheme: ThemeDefinition = {
@@ -45,7 +41,7 @@ const darkTheme: ThemeDefinition = {
 
 export default createVuetify({
   theme: {
-    defaultTheme: 'dark', // Starte mit Dark Mode (wird vom Store überschrieben)
+    defaultTheme: 'dark',
     themes: {
       light: lightTheme,
       dark: darkTheme,

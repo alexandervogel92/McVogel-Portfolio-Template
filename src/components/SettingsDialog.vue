@@ -121,7 +121,7 @@
 
 <script lang="ts" setup>
 import { ref, watch, computed } from 'vue';
-import { useGlobalSettingsStore, availableFonts } from '@/store/globalSettings.ts'; // Importiere Store und Fonts
+import { useGlobalSettingsStore, availableFonts } from '@/store/globalSettings.ts';
 import ColorPickerField from './ColorPickerField.vue';
 
 const props = defineProps({
@@ -142,7 +142,6 @@ watch(internalDialog, (val) => {
   emits('update:modelValue', val);
 });
 
-// Labels für die Einstellungsfelder (ggf. mehrsprachig machen)
 const fieldLabels = computed(() => ({
   primary: store.currentLanguage === 'DE' ? 'Primärfarbe' : 'Primary',
   secondary: store.currentLanguage === 'DE' ? 'Sekundärfarbe' : 'Secondary',
@@ -162,7 +161,6 @@ const fieldLabels = computed(() => ({
   fontFamily: store.currentLanguage === 'DE' ? 'Schriftart' : 'Font Family'
 }));
 
-// Hole die Schlüssel aus dem aktuellen Theme
 const themeSettingKeys = computed(() =>
   Object.keys(store.themeSettings)
 );
@@ -176,7 +174,7 @@ function closeDialog() {
 
 <style scoped>
 .dense-row {
-  margin-bottom: 2px; /* Weniger Abstand zwischen den Zeilen */
+  margin-bottom: 2px; 
   padding-top: 2px;
   padding-bottom: 2px;
 }
@@ -196,10 +194,10 @@ function closeDialog() {
 }
 .v-btn-toggle .v-btn {
   flex: 1 1 auto;
-  font-size: 0.8rem; /* Kleinere Schrift für Buttons im Toggle */
+  font-size: 0.8rem; 
 }
 .text-caption {
-  font-size: 0.75rem !important; /* Kleinere Labels */
+  font-size: 0.75rem !important; 
   opacity: 0.8;
 }
 </style>

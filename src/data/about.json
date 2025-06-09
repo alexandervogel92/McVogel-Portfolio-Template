@@ -1,17 +1,17 @@
 {
   "DE": {
     "welcome": "Willkommen ich bin",
-    "name": "Alexander",
+    "name": "Your Name",
     "title": "Über Mich",
-    "description": "Hallo, ich bin Alex! ~ Als leidenschaftlicher **Fullstack-Entwickler** mit einer soliden Ausbildung zum **Fachinformatiker** liebe ich es, moderne und fokussierte Webanwendungen zu gestalten. ~ Mit Erfahrung in Technologien wie **REST APIs** und **Docker** setze ich sowohl herausfordernde als auch kompakte Projekte mit Begeisterung um. ~ Mein Ziel ist es, sauberen, effizienten Code zu schreiben und robuste digitale Lösungen zu schaffen.",
+    "description": "Hallo, ich bin Your Name! ~ Als leidenschaftlicher **Fullstack-Entwickler** mit einer soliden Ausbildung zum **Fachinformatiker** liebe ich es, moderne und fokussierte Webanwendungen zu gestalten. ~ Mit Erfahrung in Technologien wie **REST APIs** und **Docker** setze ich sowohl herausfordernde als auch kompakte Projekte mit Begeisterung um. ~ Mein Ziel ist es, sauberen, effizienten Code zu schreiben und robuste digitale Lösungen zu schaffen.",
     "technologies": "Technologien, mit denen ich arbeite",
     "contact_me": "Kontakt aufnehmen"
   },
   "EN": {
     "welcome": "Welcome I am",
-    "name": "Alexander",
+    "name": "Your Name",
     "title": "About Me",
-    "description": "Hi, I'm Alex! ~ As a passionate **Fullstack Developer** with a solid background as a formally trained **IT Specialist (Fachinformatiker)**, I love crafting modern and focused web applications. ~ Experienced with technologies like **REST APIs** and **Docker**, I enthusiastically tackle both challenging and straightforward projects. ~ My goal is to write clean, efficient code and build robust digital solutions.",
+    "description": "Hi, I'm Your Name! ~ As a passionate **Fullstack Developer** with a solid background as a formally trained **IT Specialist (Fachinformatiker)**, I love crafting modern and focused web applications. ~ Experienced with technologies like **REST APIs** and **Docker**, I enthusiastically tackle both challenging and straightforward projects. ~ My goal is to write clean, efficient code and build robust digital solutions.",
     "technologies": "Technologies I Work With",
     "contact_me": "Get in Touch"
   }

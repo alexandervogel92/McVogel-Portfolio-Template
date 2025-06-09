@@ -7,7 +7,6 @@
       height="60"
       slider-color="#f78166"
     >
-      <!-- Dynamische Tabs -->
       <v-tab
         v-for="tab in tabs"
         :key="tab.value"
@@ -18,7 +17,6 @@
       ></v-tab>
     </v-tabs>
 
-    <!-- Router View mit Slide-Effekt -->
     <transition name="slide-fade">
       <router-view />
     </transition>
@@ -29,39 +27,36 @@
 export default {
   data() {
     return {
-      activeTab: "", // Aktiver Tab, initial leer
+      activeTab: "",
       tabs: [
         {
           icon: "mdi-home",
           text: "Home",
           value: "home",
-          path: "/", // Route für Home
+          path: "/",
         },
         {
           icon: "mdi-folder",
           text: "Projects",
           value: "projects",
-          path: "/projects", // Route für Projekte
+          path: "/projects",
         },
       ],
     };
   },
   created() {
-    // Aktivieren des richtigen Tabs basierend auf der Route
     const matchedTab = this.tabs.find((tab) => tab.path === this.$route.path);
     if (matchedTab) {
       this.activeTab = matchedTab.value;
     }
   },
   watch: {
-    // Synchronisation des aktiven Tabs mit der Route
     $route(to) {
       const matchedTab = this.tabs.find((tab) => tab.path === to.path);
       if (matchedTab) {
         this.activeTab = matchedTab.value;
       }
     },
-    // Synchronisierung der Route mit dem aktiven Tab
     activeTab(value) {
       const matchedTab = this.tabs.find((tab) => tab.value === value);
       if (matchedTab) {
@@ -77,7 +72,7 @@ export default {
   font-weight: bold;
 }
 
-/* Übergang für den Slide-Effekt */
+
 .slide-fade-enter-active, .slide-fade-leave-active {
   transition: transform 0.5s ease-in-out;
 }

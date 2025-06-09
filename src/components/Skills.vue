@@ -6,10 +6,8 @@
           <v-icon start color="accent">mdi-star-cog-outline</v-icon>
           {{ content.skillsTitle }}
         </h3>
-        <!-- Wrapper, um die Hover-Effekte über beide Karten anwenden zu können -->
         <div class="skills-wrapper">
           <v-row>
-            <!-- Hard Skills Card -->
             <v-col cols="12" md="6" class="skill-card-wrapper mb-4 mb-md-0">
               <v-card class="pa-3 fill-height" elevation="1">
                 <v-card-title class="text-subtitle-1 font-weight-bold justify-center mb-2">
@@ -37,7 +35,6 @@
               </v-card>
             </v-col>
 
-            <!-- Soft Skills Card -->
             <v-col cols="12" md="6" class="skill-card-wrapper">
               <v-card class="pa-3 fill-height" elevation="1">
                 <v-card-title class="text-subtitle-1 font-weight-bold justify-center mb-2">
@@ -69,13 +66,12 @@
 import { computed, inject, ref, Ref } from 'vue';
 import resumeData from '@/data/resumeData.json';
 
-// Hole die globale Sprache (Default: 'DE')
 const currentLanguage = inject<Ref<'DE' | 'EN'>>('currentLanguage', ref('DE'));
 const content = computed(() => resumeData[currentLanguage.value]);
 </script>
 
 <style scoped lang="scss">
-/* Standard-Regeln für die Skill-Karten */
+
 .skills-section .v-card {
   background-color: var(--container-color);
 }
@@ -90,17 +86,17 @@ const content = computed(() => resumeData[currentLanguage.value]);
   }
 }
 
-/* Wrapper für die Hover-Effekte */
+
 .skills-wrapper {
   display: block;
 }
 
-/* Jede Skill-Karte erhält diese Klasse */
+
 .skill-card-wrapper {
   transition: filter 0.3s ease;
 }
 
-/* Wenn über den Wrapper gehovt wird, werden alle Karten, die nicht direkt gehovt werden, geblurt */
+
 .skills-wrapper:hover .skill-card-wrapper:not(:hover) {
   filter: blur(4px);
 }

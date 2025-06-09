@@ -12,7 +12,6 @@
 
         <div class="skills-wrapper">
         <v-row>
-          <!-- Hard Skills Card -->
           <v-col cols="12" md="6" class="skill-card-wrapper mb-4 mb-md-0">
             <v-card class="pa-3 fill-height" elevation="1">
               <v-card-title
@@ -21,7 +20,6 @@
                 {{ content.hardSkillsTitle }}
               </v-card-title>
               <v-card-text class="pa-1">
-                <!-- Iteriere über die gruppierten Hard Skills -->
                 <div
                   v-for="(skills, category) in groupedHardSkills"
                   :key="category"
@@ -50,7 +48,6 @@
             </v-card>
           </v-col>
 
-          <!-- Soft Skills Card -->
           <v-col cols="12" md="6" class="skill-card-wrapper">
             <v-card class="pa-3 fill-height" elevation="1">
               <v-card-title
@@ -87,11 +84,9 @@
 import { computed, inject, ref, Ref } from 'vue';
 import resumeData from '@/data/resumeData.json';
 
-// Hole die globale Sprache (Default: 'DE')
 const currentLanguage = inject<Ref<'DE' | 'EN'>>('currentLanguage', ref('DE'));
 const content = computed(() => resumeData[currentLanguage.value]);
 
-// Gruppiere die Hard Skills nach Kategorie
 const groupedHardSkills = computed(() => {
   return content.value.hardSkills.reduce((groups, skill) => {
     const category = skill.category;
@@ -120,7 +115,7 @@ const groupedHardSkills = computed(() => {
     transform: scale(1.05);
   }
 }
-/* Gruppen der Hard Skills */
+
 .hard-skill-group {
   margin-bottom: 1rem;
   .category-title {
@@ -131,7 +126,7 @@ const groupedHardSkills = computed(() => {
   }
 }
 
-/* Soft Skills Liste */
+
 .soft-skill-list {
   list-style: none;
   padding: 0;
@@ -144,12 +139,12 @@ const groupedHardSkills = computed(() => {
   display: block;
 }
 
-/* Jede Skill-Karte erhält diese Klasse */
+
 .skill-card-wrapper {
   transition: filter 0.3s ease;
 }
 
-/* Wenn über den Wrapper gehovt wird, werden alle Karten, die nicht direkt gehovt werden, geblurt */
+
 .skills-wrapper:hover .skill-card-wrapper:not(:hover) {
   filter: blur(4px);
 }
