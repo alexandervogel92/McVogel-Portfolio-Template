@@ -2,7 +2,7 @@
   "DE": {
     "title": "Lebenslauf",
     "experienceTitle": "Beruflicher Werdegang",
-    "educationTitle": "Ausbildung & Praxiserfahrung",
+    "educationTitle": "Ausbildung",
     "skillsTitle": "Kenntnisse",
     "hardSkillsTitle": "Hard Skills",
     "softSkillsTitle": "Soft Skills",
@@ -10,151 +10,82 @@
     "workExperience": [
       {
         "id": 1,
-        "title": "Fullstack Entwickler",
-        "company": "Example Tech GmbH",
-        "location": "Berlin",
-        "period": "2022 - Heute",
-        "description": [
-          "Entwicklung und Wartung von Webanwendungen mit Vue.js und Node.js.",
-          "Implementierung von REST APIs für interne und externe Dienste.",
-          "Containerisierung von Anwendungen mit Docker.",
-          "Zusammenarbeit in einem agilen Team (Scrum)."
-        ],
-        "skillsUsed": ["Vue.js", "Node.js", "Docker", "REST APIs", "Git / GitHub", "TypeScript"]
+        "title": "Jobtitel",
+        "company": "Firma",
+        "location": "Ort",
+        "period": "Jahr - Jahr",
+        "description": ["F\u00fcge hier deine Arbeitserfahrung ein."],
+        "skillsUsed": ["Skill 1", "Skill 2"]
       },
       {
         "id": 2,
-        "title": "Junior Webentwickler",
-        "company": "Example Solutions AG",
-        "location": "München",
-        "period": "2020 - 2022",
-        "description": [
-          "Unterstützung bei der Frontend-Entwicklung mit HTML, CSS, JavaScript.",
-          "Erstellung von WordPress-Themes und Plugins.",
-          "Fehlerbehebung und Tests."
-        ],
-        "skillsUsed": ["HTML5", "CSS3 / SASS", "JavaScript (ES6+)", "PHP", "Git / GitHub"]
+        "title": "Jobtitel",
+        "company": "Firma",
+        "location": "Ort",
+        "period": "Jahr - Jahr",
+        "description": ["F\u00fcge hier deine Arbeitserfahrung ein."],
+        "skillsUsed": ["Skill 1", "Skill 2"]
       }
     ],
     "education": [
       {
         "id": 101,
-        "title": "Ausbildung zum Fachinformatiker – Anwendungsentwicklung",
-        "company": "Example Corp",
-        "location": "Ingolstadt",
-        "period": "2023 - 2025",
-        "description": "Voraussichtlicher Abschluss 2025 (Schwerpunkt moderne Web- und Anwendungsentwicklung)",
+        "title": "Ausbildung",
+        "company": "Ausbildungsbetrieb",
+        "location": "Ort",
+        "period": "Jahr - Jahr",
+        "description": "F\u00fcge hier deine Ausbildung ein.",
         "skillsUsed": []
       },
       {
         "id": 102,
-        "title": "Abschluss Praxisprojekt",
-        "company": "Example Corp",
-        "location": "Ingolstadt",
-        "period": "2023 - 2025",
-        "description": "Eigenständige Konzeption und Umsetzung eines internen Umfragetools mit Vue 3 und Vuetify.\nAufbau und Verwaltung einer MySQL-Datenbank, Containerisierung mit Docker sowie Versionsverwaltung über Bitbucket.\nDatenvisualisierung durch Chart.js und Implementierung responsiver UI-Komponenten.",
-        "skillsUsed": ["Vue3", "Vuetify", "CSS3 / SASS", "Node.js", "Chart.js", "MySQL", "Bitbucket", "Docker"]
-      },
-      {
-        "id": 103,
-        "title": "Tägliche Aufgaben",
-        "company": "Example Corp",
-        "location": "Ingolstadt",
-        "period": "2023 - 2025",
-        "description": "Unterstützung im Web-Entwicklungsteam.\nImplementierung neuer Features in drei verschiedenen Webprojekten.\nBugfixing, Code Reviews und Testing.\n1st–3rd Level Support für interne Anwendungen.",
-        "skillsUsed": ["Vue3", "NaivUI", "CSS3 / SASS", "Node.js", "PHP", "Python", "MySQL", "Git", "Bitbucket", "Docker", "Jira", "Confluence"]
+        "title": "Weiterbildung",
+        "company": "Institut",
+        "location": "Ort",
+        "period": "Jahr - Jahr",
+        "description": "F\u00fcge hier weitere Ausbildung ein.",
+        "skillsUsed": []
       }
     ],
-    "projectsTitle": "Eigene Projekte",
+    "projectsTitle": "Projekte",
     "projects": [
       {
         "id": 1,
-        "title": "Portfolio-Website",
-        "role": "Eigenständige Entwicklung",
-        "description": "Ich habe meine persönliche Portfolio-Website von Grund auf mit Vue.js und Vuetify erstellt, um meine Arbeiten und Fähigkeiten ansprechend zu präsentieren. Die Seite ist vollständig responsiv und läuft auf meinem eigenen Linux-Server via Docker Compose – inklusive automatischem SSL mit Let’s Encrypt.",
-        "skillsUsed": [
-          "Vue.js",
-          "Vuetify",
-          "HTML",
-          "CSS",
-          "Docker Compose",
-          "Let’s Encrypt"
-        ],
+        "title": "Projekt",
+        "role": "Rolle",
+        "description": "F\u00fcge hier eine Projektbeschreibung ein.",
+        "skillsUsed": ["Skill 1", "Skill 2"],
         "link": "https://example.com"
       },
       {
         "id": 2,
-        "title": "Fotografen-Webseite",
-        "role": "Eigenständige Entwicklung",
-        "description": "Für Birdeye-Fotografie habe ich eine moderne, responsive Website gebaut, die Besucher:innen eine interaktive Galerie mit Lazy Loading und Lightbox-Ansicht bietet. Alle Bilder werden selbst über meinem Server per Docker Compose ausgeliefert, optimiert durch automatische Kompression und Caching.",
-        "skillsUsed": [
-          "Vue.js",
-          "Vuetify",
-          "JavaScript",
-          "Docker Compose",
-          "Bildkompression"
-        ],
-        "link": "https://example-photography.com"
-      },
-      {
-        "id": 3,
-        "title": "Hangman",
-        "role": "Eigenständige Entwicklung (mit Tutorial)",
-        "description": "Entwickelte ein Hangman-Konsolenspiel in C# mit zufälliger Wortauswahl, Buchstabeneingabe und Spielschleife zur Festigung grundlegender Sprachkonzepte – inklusive Versionsverwaltung via GitHub.",
-        "skillsUsed": ["C#"],
-        "link": "https://github.com/username/repo"
-      },
-      {
-        "id": 4,
-        "title": "Liquid-Rechner",
-        "role": "Eigenständige Entwicklung (mit Tutorial)",
-        "description": "Erstellte einen konsolenbasierten Liquid-Rechner in C#, der Benutzer:innen ermöglicht, Volumeneinheiten umzuwandeln, mit Eingabevalidierung und einfachem Fehler-Handling.",
-        "skillsUsed": ["C#"],
-        "link": "https://github.com/username/repo"
-      },
-      {
-        "id": 5,
-        "title": "Einfache Liste",
-        "role": "Eigenständige Entwicklung",
-        "description": "Implementierte eine dynamische To-Do-Liste mit HTML, CSS und JavaScript, die das Hinzufügen, Entfernen und Speichern von Einträgen im Local Storage ermöglicht und Grundlagen der DOM-Manipulation vertieft.",
-        "skillsUsed": ["HTML", "CSS", "JavaScript"],
-        "link": "https://github.com/username/repo"
+        "title": "Projekt",
+        "role": "Rolle",
+        "description": "F\u00fcge hier eine Projektbeschreibung ein.",
+        "skillsUsed": ["Skill 1", "Skill 2"],
+        "link": "https://example.com"
       }
     ],
     "hardSkills": [
       { "name": "Vue.js", "icon": "mdi-vuejs", "category": "Frontend" },
       { "name": "Vuetify", "icon": "mdi-vuetify", "category": "Frontend" },
-      { "name": "JavaScript (ES6+)", "icon": "mdi-language-javascript", "category": "Core" },
+      { "name": "JavaScript", "icon": "mdi-language-javascript", "category": "Core" },
       { "name": "TypeScript", "icon": "mdi-language-typescript", "category": "Core" },
-      { "name": "HTML5", "icon": "mdi-language-html5", "category": "Frontend" },
-      { "name": "CSS3 / SASS", "icon": "mdi-language-css3", "category": "Frontend" },
       { "name": "Node.js", "icon": "mdi-nodejs", "category": "Backend" },
       { "name": "Express.js", "icon": "mdi-server", "category": "Backend" },
-      { "name": "PHP", "icon": "mdi-language-php", "category": "Backend" },
-      { "name": "Python", "icon": "mdi-language-python", "category": "Backend" },
-      { "name": "SQL (MySQL, PostgreSQL)", "icon": "mdi-database", "category": "Datenbanken" },
-      { "name": "REST APIs", "icon": "mdi-api", "category": "Core" },
+      { "name": "SQL", "icon": "mdi-database", "category": "Databases" },
+      { "name": "MongoDB", "icon": "mdi-database", "category": "Databases" },
       { "name": "Docker", "icon": "mdi-docker", "category": "DevOps" },
       { "name": "CI/CD", "icon": "mdi-server", "category": "DevOps" },
-      { "name": "Git / GitHub", "icon": "mdi-git", "category": "Tools" },
-      { "name": "Linux Basics", "icon": "mdi-linux", "category": "Tools" }
+      { "name": "Git", "icon": "mdi-git", "category": "Tools" },
+      { "name": "Linux", "icon": "mdi-linux", "category": "Tools" }
     ],
-    "softSkills": [
-      "Problemlösungskompetenz",
-      "Teamfähigkeit",
-      "Kommunikationsstärke",
-      "Lernbereitschaft",
-      "Schnelle Auffassungsgabe",
-      "Analytisches- und Lösungsorientiertes Denken",
-      "Fokussiertes Arbeiten",
-      "Anpassungsfähigkeit",
-      "Technisch neugierig mit einem Gespür für sauberen Code"
-    ]
+    "softSkills": ["Teamf\u00e4higkeit", "Lernbereitschaft"]
   },
   "EN": {
     "title": "Resume",
     "experienceTitle": "Work Experience",
-    "educationTitle": "Education & Practical Experience",
+    "educationTitle": "Education",
     "skillsTitle": "Skills",
     "hardSkillsTitle": "Hard Skills",
     "softSkillsTitle": "Soft Skills",
@@ -162,145 +93,76 @@
     "workExperience": [
       {
         "id": 1,
-        "title": "Fullstack Developer",
-        "company": "Example Tech GmbH",
-        "location": "Berlin",
-        "period": "2022 - Present",
-        "description": [
-          "Development and maintenance of web applications using Vue.js and Node.js.",
-          "Implementation of REST APIs for internal and external services.",
-          "Containerization of applications with Docker.",
-          "Collaboration within an agile team (Scrum)."
-        ],
-        "skillsUsed": ["Vue.js", "Node.js", "Docker", "REST APIs", "Git / GitHub", "TypeScript"]
+        "title": "Job Title",
+        "company": "Company",
+        "location": "Location",
+        "period": "Year - Year",
+        "description": ["Add your job description here."],
+        "skillsUsed": ["Skill 1", "Skill 2"]
       },
       {
         "id": 2,
-        "title": "Junior Web Developer",
-        "company": "Example Solutions AG",
-        "location": "Munich",
-        "period": "2020 - 2022",
-        "description": [
-          "Assisted in frontend development using HTML, CSS, JavaScript.",
-          "Created WordPress themes and plugins.",
-          "Performed debugging and testing."
-        ],
-        "skillsUsed": ["HTML5", "CSS3 / SASS", "JavaScript (ES6+)", "PHP", "Git / GitHub"]
+        "title": "Job Title",
+        "company": "Company",
+        "location": "Location",
+        "period": "Year - Year",
+        "description": ["Add your job description here."],
+        "skillsUsed": ["Skill 1", "Skill 2"]
       }
     ],
     "education": [
       {
         "id": 101,
-        "title": "Apprenticeship as IT Specialist – Application Development",
-        "company": "Example Corp",
-        "location": "Ingolstadt, Germany",
-        "period": "2023 - 2025",
-        "description": "Expected graduation in 2025 (focus on modern web and application development).",
+        "title": "Education",
+        "company": "Institution",
+        "location": "Location",
+        "period": "Year - Year",
+        "description": "Add your education here.",
         "skillsUsed": []
       },
       {
         "id": 102,
-        "title": "Final Practical Project",
-        "company": "Example Corp",
-        "location": "Ingolstadt, Germany",
-        "period": "2023 - 2025",
-        "description": "Independently conceptualized and implemented an internal survey tool using Vue 3 and Vuetify.\nSet up and managed a MySQL database, containerized the application with Docker, and maintained version control via Bitbucket.\nVisualized data with Chart.js and developed responsive UI components.",
-        "skillsUsed": ["Vue3", "Vuetify", "CSS3 / SASS", "Node.js", "Chart.js", "MySQL", "Bitbucket", "Docker"]
-      },
-      {
-        "id": 103,
-        "title": "Daily Responsibilities",
-        "company": "Example Corp",
-        "location": "Ingolstadt, Germany",
-        "period": "2023 - Present",
-        "description": "Provide support to the web development team.\nImplement new features across three different web projects.\nPerform bug fixing, code reviews, and testing.\nHandle 1st–3rd level support for internal applications.",
-        "skillsUsed": ["Vue3", "NaivUI", "CSS3 / SASS", "Node.js", "PHP", "Python", "MySQL", "Git", "Bitbucket", "Docker", "Jira", "Confluence"]
+        "title": "Additional Training",
+        "company": "Institution",
+        "location": "Location",
+        "period": "Year - Year",
+        "description": "Add more education here.",
+        "skillsUsed": []
       }
     ],
-    "projectsTitle": "Own Projects",
+    "projectsTitle": "Projects",
     "projects": [
       {
         "id": 1,
-        "title": "Portfolio Website",
-        "role": "Self-Development",
-        "description": "I built my personal portfolio website from scratch using Vue.js and Vuetify to showcase my skills and projects. The site is fully responsive and runs on my own Linux server via Docker Compose, including automatic SSL with Let’s Encrypt.",
-        "skillsUsed": [
-          "Vue.js",
-          "Vuetify",
-          "HTML",
-          "CSS",
-          "Docker Compose",
-          "Let’s Encrypt"
-        ],
+        "title": "Project",
+        "role": "Role",
+        "description": "Add a short project description here.",
+        "skillsUsed": ["Skill 1", "Skill 2"],
         "link": "https://example.com"
       },
       {
         "id": 2,
-        "title": "Photographer Website",
-        "role": "Self-Development",
-        "description": "For BirdEye Photography, I developed a modern, responsive website featuring an interactive gallery with lazy loading and lightbox view. All images are served from my own server via Docker Compose, optimized with automated compression and caching.",
-        "skillsUsed": [
-          "Vue.js",
-          "Vuetify",
-          "JavaScript",
-          "Docker Compose",
-          "Image Optimization"
-        ],
-        "link": "https://example-photography.com"
-      },
-      {
-        "id": 3,
-        "title": "Hangman",
-        "role": "Self-Development (with Tutorial)",
-        "description": "Built a C# console Hangman game featuring random word selection, letter-by-letter input and a looped game flow to reinforce core language concepts – all versioned via GitHub.",
-        "skillsUsed": ["C#"],
-        "link": "https://github.com/username/repo"
-      },
-      {
-        "id": 4,
-        "title": "Liquid Calculator",
-        "role": "Self-Development (with Tutorial)",
-        "description": "Created a C# console-based liquid calculator that lets users convert between volume units, with input validation and basic error handling.",
-        "skillsUsed": ["C#"],
-        "link": "https://github.com/username/repo"
-      },
-      {
-        "id": 5,
-        "title": "Simple List",
-        "role": "Self-Development",
-        "description": "Developed a dynamic to-do list web app using HTML, CSS and vanilla JavaScript, supporting add/remove actions and local storage persistence to deepen DOM manipulation skills.",
-        "skillsUsed": ["HTML", "CSS", "JavaScript"],
-        "link": "https://github.com/username/repo"
+        "title": "Project",
+        "role": "Role",
+        "description": "Add a short project description here.",
+        "skillsUsed": ["Skill 1", "Skill 2"],
+        "link": "https://example.com"
       }
     ],
     "hardSkills": [
       { "name": "Vue.js", "icon": "mdi-vuejs", "category": "Frontend" },
       { "name": "Vuetify", "icon": "mdi-vuetify", "category": "Frontend" },
-      { "name": "JavaScript (ES6+)", "icon": "mdi-language-javascript", "category": "Core" },
+      { "name": "JavaScript", "icon": "mdi-language-javascript", "category": "Core" },
       { "name": "TypeScript", "icon": "mdi-language-typescript", "category": "Core" },
-      { "name": "HTML5", "icon": "mdi-language-html5", "category": "Frontend" },
-      { "name": "CSS3 / SASS", "icon": "mdi-language-css3", "category": "Frontend" },
       { "name": "Node.js", "icon": "mdi-nodejs", "category": "Backend" },
       { "name": "Express.js", "icon": "mdi-server", "category": "Backend" },
-      { "name": "PHP", "icon": "mdi-language-php", "category": "Backend" },
-      { "name": "Python", "icon": "mdi-language-python", "category": "Backend" },
-      { "name": "SQL (MySQL, PostgreSQL)", "icon": "mdi-database", "category": "Databases" },
-      { "name": "REST APIs", "icon": "mdi-api", "category": "Core" },
+      { "name": "SQL", "icon": "mdi-database", "category": "Databases" },
+      { "name": "MongoDB", "icon": "mdi-database", "category": "Databases" },
       { "name": "Docker", "icon": "mdi-docker", "category": "DevOps" },
       { "name": "CI/CD", "icon": "mdi-server", "category": "DevOps" },
-      { "name": "Git / GitHub", "icon": "mdi-git", "category": "Tools" },
-      { "name": "Linux Basics", "icon": "mdi-linux", "category": "Tools" }
+      { "name": "Git", "icon": "mdi-git", "category": "Tools" },
+      { "name": "Linux", "icon": "mdi-linux", "category": "Tools" }
     ],
-    "softSkills": [
-      "Problem-solving skills",
-      "Team player",
-      "Strong communication skills",
-      "Willingness to learn",
-      "Quick comprehension",
-      "Analytical and solution-oriented thinking",
-      "Focused working style",
-      "Adaptability",
-      "Technically curious with an eye for clean code"
-    ]
+    "softSkills": ["Team player", "Willingness to learn"]
   }
 }
