@@ -14,7 +14,7 @@
         "company": "Firma",
         "location": "Ort",
         "period": "Jahr - Jahr",
-        "description": ["F\u00fcge hier deine Arbeitserfahrung ein."],
+        "description": ["Füge hier deine Arbeitserfahrung ein."],
         "skillsUsed": ["Skill 1", "Skill 2"]
       },
       {
@@ -23,7 +23,7 @@
         "company": "Firma",
         "location": "Ort",
         "period": "Jahr - Jahr",
-        "description": ["F\u00fcge hier deine Arbeitserfahrung ein."],
+        "description": ["Füge hier deine Arbeitserfahrung ein."],
         "skillsUsed": ["Skill 1", "Skill 2"]
       }
     ],
@@ -34,7 +34,7 @@
         "company": "Ausbildungsbetrieb",
         "location": "Ort",
         "period": "Jahr - Jahr",
-        "description": "F\u00fcge hier deine Ausbildung ein.",
+        "description": "Füge hier deine Ausbildung ein.",
         "skillsUsed": []
       },
       {
@@ -43,7 +43,7 @@
         "company": "Institut",
         "location": "Ort",
         "period": "Jahr - Jahr",
-        "description": "F\u00fcge hier weitere Ausbildung ein.",
+        "description": "Füge hier weitere Ausbildung ein.",
         "skillsUsed": []
       }
     ],
@@ -53,7 +53,7 @@
         "id": 1,
         "title": "Projekt",
         "role": "Rolle",
-        "description": "F\u00fcge hier eine Projektbeschreibung ein.",
+        "description": "Füge hier eine Projektbeschreibung ein.",
         "skillsUsed": ["Skill 1", "Skill 2"],
         "link": "https://example.com"
       },
@@ -61,7 +61,7 @@
         "id": 2,
         "title": "Projekt",
         "role": "Rolle",
-        "description": "F\u00fcge hier eine Projektbeschreibung ein.",
+        "description": "Füge hier eine Projektbeschreibung ein.",
         "skillsUsed": ["Skill 1", "Skill 2"],
         "link": "https://example.com"
       }
@@ -80,7 +80,7 @@
       { "name": "Git", "icon": "mdi-git", "category": "Tools" },
       { "name": "Linux", "icon": "mdi-linux", "category": "Tools" }
     ],
-    "softSkills": ["Teamf\u00e4higkeit", "Lernbereitschaft"]
+    "softSkills": ["Teamfähigkeit", "Lernbereitschaft"]
   },
   "EN": {
     "title": "Resume",

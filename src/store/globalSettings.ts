@@ -180,7 +180,6 @@ export const useGlobalSettingsStore = defineStore('globalSettings', () => {
     if (document.head) {
       document.head.appendChild(link);
       loadedFonts.add(fontFamily);
-      console.log(`Font '${fontName}' loaded.`);
     } else {
       console.error("Could not find document.head to append font link.");
     }
